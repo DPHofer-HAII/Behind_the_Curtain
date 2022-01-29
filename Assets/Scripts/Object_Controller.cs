@@ -11,7 +11,9 @@ public class Object_Controller : MonoBehaviour
     public GameObject door;
 
     public GameObject Scene_One;
-    
+    public GameObject Scene_Two;
+    public GameObject Scene_Three;
+
 
     public int phase = 1;
     public bool started = false;
@@ -107,13 +109,13 @@ public class Object_Controller : MonoBehaviour
                 {
                     started = true;
                     deactivateEverything(bed);
-                    StartCoroutine(youPeterPlayThatVideo(Scene_One));
+                    StartCoroutine(youPeterPlayThatVideo(Scene_Two));
                 }
                 else if ((hit.transform.name == "Door" && phase == 3) || (hit.transform.name == "Door" && phase == 4))
                 {
                     started = true;
                     deactivateEverything(door);
-                    StartCoroutine(youPeterPlayThatVideo(Scene_One));
+                    StartCoroutine(youPeterPlayThatVideo(Scene_Three));
                 }
                 else if (hit.transform.name == "Hamburger_Menu")
                 {
